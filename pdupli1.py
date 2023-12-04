@@ -5,8 +5,11 @@ PROBLEMA 1. Realizar una función que reciba como parámetro un DataFrame y reto
 porcentaje de valores nulos de cada columna.
 """
 import pandas as pd
-df = "boston_house_prices.csv"
-data = pd.read_csv(df)
+import numpy as np
+
+data = pd.DataFrame({'brand': ['Yum Yum', 'Yum Yum', 'Indomie', 'Indomie', 'Indomie'],
+                    'cost(Dlls)': [np.nan, np.nan, np.nan, 48, 50],
+                    'rating': [4, 4, 3.5, np.nan, 5]})
 #print(data)
 def valnull(data) :
     nullv= data.isnull().sum()
